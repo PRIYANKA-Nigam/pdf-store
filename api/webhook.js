@@ -33,7 +33,7 @@ const AMOUNT_MAP = {
    WEBHOOK HANDLER
 ========================= */
 export default async function handler(req, res) {
-  console.log("GitHub auto deploy test");
+ // console.log("GitHub auto deploy test");
   try {
     console.log("🔔 WEBHOOK HIT");
 
@@ -89,10 +89,10 @@ console.log("LOOKUP KEY:", amount);
 console.log("MAP RESULT:", pdfList);
       const transporter = nodemailer.createTransport({
         service: "gmail",
-        auth: {
-          user: "priyankanigam25041999@gmail.com",
-          pass: "bgkm crmj ctji bfyi"
-        }
+         auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS
+  }
       });
 
      await transporter.sendMail({
