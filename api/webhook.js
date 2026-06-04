@@ -35,7 +35,7 @@ const AMOUNT_MAP = {
 export default async function handler(req, res) {
  // console.log("GitHub auto deploy test");
   try {
-    console.log("🔔 WEBHOOK HIT");
+   console.log("🔔 WEBHOOK HIT - VERSION 2");
 
     if (req.method !== "POST") {
       return res.status(200).send("Webhook alive");
